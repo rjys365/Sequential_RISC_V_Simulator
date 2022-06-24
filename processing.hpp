@@ -285,7 +285,7 @@ bool instructionEx(const Command &cmd,const Register &reg,ExeResult &result,PCou
             break;
         case CmdType::addi:
             if(cmd.rd==10&&cmd.rs1==0&&cmd.imm==255){
-                std::cout<<"Execution complete! Return value:"<<(int)((uint8_t)reg.read(10))<<std::endl;
+                std::cout<<(int)((uint8_t)reg.read(10))<<std::endl;
                 return true;
             };
             result.wb=true;
